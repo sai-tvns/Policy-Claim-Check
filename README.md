@@ -1,6 +1,6 @@
-# Policy & Claims Copilot
+# Policy & Claims Check
 
-Policy & Claims Copilot is an AI-powered assistant for insurance policy support and claims pre-check. It uses Retrieval-Augmented Generation (RAG) to answer questions only from uploaded policy PDF documents.
+Policy & Claims Check is an AI-powered assistant for insurance policy support and claims pre-check. It uses Retrieval-Augmented Generation (RAG) to answer questions only from uploaded policy PDF documents.
 
 The system helps users and agents quickly find:
 - policy coverage details
