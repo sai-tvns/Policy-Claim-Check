@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# env
+.env
+.env.local
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# build / dist
+build/
+dist/
+
+# FAISS / generated vector DB
+vector_store/
+*.faiss
+*.npy
+chunks.json
+
+# OS
+Thumbs.db
+.DS_Store

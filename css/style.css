@@ -1,0 +1,28 @@
+:root {
+    color-scheme: dark;
+}
+
+body {
+    background: #0f172a;
+}
+
+.main-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.stButton > button {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    color: white;
+    border: none;
+}
+
+.stTextInput > div > input, .stTextArea > div > textarea, .stSelectbox > div > div {
+    border-radius: 10px;
+}
+
+[data-testid="stSidebar"] {
+    background: #111827;
+}

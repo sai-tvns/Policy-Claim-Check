@@ -1,47 +1,48 @@
 # Policy & Claims Check
 
-Policy & Claims Check is an AI-powered assistant for insurance policy support and claims pre-check. It uses Retrieval-Augmented Generation (RAG) to answer questions only from uploaded policy PDF documents.
+Policy & Claims Check is an AI-powered insurance assistant that uses Retrieval-Augmented Generation (RAG) to answer questions strictly from uploaded policy PDF documents. It supports:
 
-The system helps users and agents quickly find:
-- policy coverage details
-- exclusions
-- waiting periods
-- limits and sub-limits
-- claim submission steps
-- required documents
-- a preliminary claim eligibility assessment
+- Policy coverage and exclusions
+- Waiting periods and limits
+- Claim submission steps and required documents
+- Preliminary claim pre-check based on uploaded policy text
 
-## Project Overview
+## Architecture
 
-This project is built as a local web application using Streamlit. It processes uploaded policy PDFs, converts them into searchable chunks, stores them in a vector database, and uses Gemini AI to generate grounded answers based only on the uploaded policy content.
+```text
+Uploaded PDF
+  -> PDF Loader
+  -> Text Chunking
+  -> Embeddings (Sentence Transformers)
+  -> FAISS Vector Store
+  -> Gemini LLM
+  -> Streamlit UI
+```
 
-The app is designed to:
-- answer questions from policy documents
-- avoid hallucinations
-- provide source page numbers
-- support claims pre-check for preliminary assessment only
+## Installation
 
-## Features
+1. Create and activate a Python 3.11 environment.
+2. Install dependencies:
 
-- Upload insurance policy PDF
-- Build vector database from PDF
-- Ask policy-related questions
-- Get grounded answers with source page references
-- Check claim eligibility preliminarily
-- Maintain chat history in the app
-- Download chat conversation
+```bash
+pip install -r requirements.txt
+```
 
-## Tech Stack
+3. Create a `.env` file using `.env.example` and add your Gemini API key.
 
-- Python
-- Streamlit
-- PyPDF
-- Sentence Transformers
-- FAISS
-- Google Gemini API
-- python-dotenv
+## How to Get a Gemini API Key
 
-## Project Structure
+1. Visit Google AI Studio.
+2. Create an API key.
+3. Paste it into the `.env` file.
+
+## Run Locally
+
+```bash
+streamlit run app.py
+```
+
+## Folder Structure
 
 ```text
 Policy_Claims_Check/
@@ -58,3 +59,15 @@ Policy_Claims_Check/
 ├── vector_store/
 └── css/
     style.css
+```
+
+## Screenshots
+
+Placeholder for screenshots.
+
+## Future Improvements
+
+- Multi-policy support
+- Document citation highlighting
+- Admin dashboard for policy versions
+- Better claim scoring logic
