@@ -44,7 +44,7 @@ The app is designed to:
 ## Project Structure
 
 ```text
-Policy_Claims_Copilot/
+Policy_Claims_Check/
 ├── app.py
 ├── rag_pipeline.py
 ├── utils.py
